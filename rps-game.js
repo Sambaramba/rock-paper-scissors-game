@@ -16,9 +16,9 @@ function getComputerChoice() {
 
 function getHumanChoice() {
     let userAnswer = prompt(" What are you going to choose? rock,paper or scissors?")
-    
-
     let userInputLowercase = userAnswer.toLowerCase();
+
+    
 
     // if (userInputLowercase !==  "rock" || "paper"|| "scissors") {
     //     alert ("That is an unacceptable answer numbnuts, please only type either rock, paper or scissors");
@@ -28,9 +28,12 @@ function getHumanChoice() {
     //     return userInputLowercase;
     // }
 
-    while( userInputLowercase !==  "rock" || "paper"|| "scissors") {
-    
-    
+    while(userInputLowercase !==  "rock" || "paper" || "scissors") {
+
+
+        // userAnswer = prompt("That is an unacceptable answer numbnuts, please only type either rock, paper or scissors")
+        
+
      if (userInputLowercase === "rock") {
 
      return "rock"
@@ -47,21 +50,22 @@ function getHumanChoice() {
 
      }
     else { 
-        userInputLowercase = prompt("That is an unacceptable answer numbnuts, please only type either rock, paper or scissors")
-        // return userInputLowercase
+        userAnswer = prompt("That is an unacceptable answer numbnuts, please only type either rock, paper or scissors")
+        userInputLowercase = userAnswer.toLowerCase()
+        // console.log();
      }
     }
 }
 
-let humanScore = 0;
-let computerScore = 0;
+// let humanScore = 0;
+// let computerScore = 0;
 
-function playRound(humanChoice, computerChoice) {
+// function playRound(humanChoice, computerChoice) {
 
 
-    "rock" >  "scissors";
-    "scissors" > "paper";
-    "paper" > "rock";
+//     // "rock" >  "scissors";
+//     // "scissors" > "paper";
+//     // "paper" > "rock";
 
 
 //  if (humanChoice === "rock" && computerChoice === "scissors") {
@@ -92,22 +96,24 @@ function playRound(humanChoice, computerChoice) {
 //     console.log("It's a draw!")
 //    }
 
-const humanSelection = getHumanChoice;
-const computerSelection = getComputerChoice;
+// }
 
-playRound(humanSelection, computerSelection)
+// const humanSelection = getHumanChoice();
+// const computerSelection = getComputerChoice();
+
+// playRound(humanSelection, computerSelection)
 
 
-if humanSelection > ComputerSelection {
-    ++humanScore
-    console.log()
-}
+// if (humanSelection > ComputerSelection) {
+//     ++humanScore
+//     console.log()
+// }
 
-else if computerSelection > humanSelection {
-    ++computerScore
-    console.log()
-}
+// else if (computerSelection > humanSelection) {
+//     ++computerScore
+//     console.log()
+// }
 
-else {
-    console.log("its a draw")
-}
+// else {
+//     console.log("its a draw")
+// }
