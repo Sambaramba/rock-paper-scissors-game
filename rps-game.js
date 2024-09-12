@@ -57,51 +57,46 @@ function getHumanChoice() {
     }
 }
 
-// let humanScore = 0;
-// let computerScore = 0;
+let humanScore = 0;
+let computerScore = 0;
 
-// function playRound(humanChoice, computerChoice) {
-
-
-//     // "rock" >  "scissors";
-//     // "scissors" > "paper";
-//     // "paper" > "rock";
+function playRound(humanChoice, computerChoice) {
 
 
-//  if (humanChoice === "rock" && computerChoice === "scissors") {
-//      console.log("YOU WIN! rock beats scissors")
-//    } 
+ if (humanChoice === "rock" && computerChoice === "scissors") {
+     console.log("YOU WIN! rock beats scissors")
+   } 
    
-//    else if (humanChoice === "rock" && computerChoice === "paper") {
-//       console.log("YOU LOSE! paper beats rock")
-//    }
+   else if (humanChoice === "rock" && computerChoice === "paper") {
+      console.log("YOU LOSE! paper beats rock")
+   }
 
-//    else if (humanChoice === "paper" && computerChoice === "rock") {
-//       console.log("YOU WIN! paper beats rock")
-//    }
+   else if (humanChoice === "paper" && computerChoice === "rock") {
+      console.log("YOU WIN! paper beats rock")
+   }
 
-//    else if( humanChoice === "paper" && computerChoice ==="scissors") {
-//       console.log("YOU LOSE! scissors beats paper")
-//    }
+   else if( humanChoice === "paper" && computerChoice ==="scissors") {
+      console.log("YOU LOSE! scissors beats paper")
+   }
 
-//    else if(humanChoice === "scissors" && computerChoice === "rock") {
-//     console.log("YOU LOSE! rock beats scissors")
-//    }
+   else if(humanChoice === "scissors" && computerChoice === "rock") {
+    console.log("YOU LOSE! rock beats scissors")
+   }
 
-//    else if (humanChoice === "scissors" && computerChoice === "paper") {
-//       console.log("YOU WIN! scissors beats paper")
-//    }
+   else if (humanChoice === "scissors" && computerChoice === "paper") {
+      console.log("YOU WIN! scissors beats paper")
+   }
 
-//    else {
-//     console.log("It's a draw!")
-//    }
+   else {
+    console.log("It's a draw!")
+   }
 
-// }
+}
 
-// const humanSelection = getHumanChoice();
-// const computerSelection = getComputerChoice();
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
 
-// playRound(humanSelection, computerSelection)
+playRound(humanSelection, computerSelection)
 
 
 // if (humanSelection > ComputerSelection) {
