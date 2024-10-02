@@ -60,7 +60,7 @@ function getHumanChoice() {
 
 
 
-function playGame(/*round*/) {
+function playGame() {
 
     let humanScore = 0;
     let computerScore = 0;
@@ -76,10 +76,10 @@ function playGame(/*round*/) {
          function playRound(humanChoice, computerChoice) {
             
            if (humanChoice === "rock" && computerChoice === "scissors") {
-             console.log("YOU WIN! rock beats scissors")
+             alert ("YOU WIN! rock beats scissors")
              ++humanScore
             //  ++round
-             console.log("Score is Human " + humanScore + ": cpu " + computerScore)
+            alert ("Score is Human " + humanScore + " : cpu " + computerScore);
              return
               return console.log("Score is Human " + humanScore + ": cpu " + computerScore)
              return humanScore && computerScore
@@ -90,10 +90,10 @@ function playGame(/*round*/) {
            } 
            
            else if (humanChoice === "rock" && computerChoice === "paper") {
-              console.log("YOU LOSE! paper beats rock")
+              alert ("YOU LOSE! paper beats rock")
               ++computerScore
             //   ++round
-              console.log("Score is Human " + humanScore + ": cpu " + computerScore)
+            alert ("Score is Human " + humanScore + " : cpu " + computerScore);
               return
                return console.log("Score is Human " + humanScore + ": cpu " + computerScore)
               return
@@ -103,10 +103,10 @@ function playGame(/*round*/) {
            }
         
            else if (humanChoice === "paper" && computerChoice === "rock") {
-              console.log("YOU WIN! paper beats rock")
+              alert ("YOU WIN! paper beats rock")
               ++humanScore
             //   ++round
-              console.log("Score is Human " + humanScore + ": cpu " + computerScore)
+            alert ("Score is Human " + humanScore + " : cpu " + computerScore);
               return
                return console.log("Score is Human " + humanScore + ": cpu " + computerScore)
               return
@@ -116,10 +116,10 @@ function playGame(/*round*/) {
            }
         
            else if( humanChoice === "paper" && computerChoice ==="scissors") {
-              console.log("YOU LOSE! scissors beats paper")
+              alert ("YOU LOSE! scissors beats paper")
               ++computerScore
             //   ++round
-              console.log("Score is Human " + humanScore + ": cpu " + computerScore)
+            alert ("Score is Human " + humanScore + " : cpu " + computerScore);
               return
               return console.log("Score is Human " + humanScore + ": cpu " + computerScore)
               return 
@@ -129,9 +129,9 @@ function playGame(/*round*/) {
            }
         
            else if(humanChoice === "scissors" && computerChoice === "rock") {
-            console.log("YOU LOSE! rock beats scissors")
+            alert ("YOU LOSE! rock beats scissors")
             ++computerScore
-            console.log("Score is Human " + humanScore + ": cpu " + computerScore)
+            alert ("Score is Human " + humanScore + ": cpu " + computerScore);
             // ++round
             // return console.log("Score is Human " + humanScore + ": cpu " + computerScore)
             return
@@ -142,10 +142,11 @@ function playGame(/*round*/) {
            }
         
            else if (humanChoice === "scissors" && computerChoice === "paper") {
-              console.log("YOU WIN! scissors beats paper")
+            alert ("YOU WIN! scissors beats paper")
               ++humanScore
             //   ++round
-              console.log("Score is Human " + humanScore + ": cpu " + computerScore);
+            alert ("Score is Human " + humanScore + " : cpu " + computerScore);
+              // console.log("Score is Human " + humanScore + ": cpu " + computerScore);
             //   return console.log("Score is Human " + humanScore + ": cpu " + computerScore);
               return
               
@@ -155,7 +156,7 @@ function playGame(/*round*/) {
            }
         
            else {
-             console.log("It's a draw!")
+             alert ("It's a draw! play round again")
              humanSelection = getHumanChoice();
              computerSelection = getComputerChoice();
    
@@ -213,10 +214,10 @@ function playGame(/*round*/) {
    /*THINK I CAN GET RID OF THE BELOW ELSE STATEMENT (NOW THAT playRound() ELSE STATEMENT HAS RECURSIVE FUNCTION)*/
 
    if (humanScore > computerScore) {
-      return alert ("You beat the computer!")
+      return alert ("GAME OVER! You beat the computer!")
    } 
    else if (computerScore > humanScore) {
-      return alert("You got beaten by the computer!")
+      return alert("GAME OVER! You got beaten by the computer!")
    } else {"The games a draw"}
 
    
