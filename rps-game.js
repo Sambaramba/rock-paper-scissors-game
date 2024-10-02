@@ -213,31 +213,22 @@ function playGame(/*round*/) {
    /*THINK I CAN GET RID OF THE BELOW ELSE STATEMENT (NOW THAT playRound() ELSE STATEMENT HAS RECURSIVE FUNCTION)*/
 
    if (humanScore > computerScore) {
-      return "You beat the computer!"
-   } else if (computerScore > humanScore) {
-      return "You got beaten by the computer!"
-   } else "The games a draw"
+      return alert ("You beat the computer!")
+   } 
+   else if (computerScore > humanScore) {
+      return alert("You got beaten by the computer!")
+   } else {"The games a draw"}
 
    
 
-   // if (round < 6) {
-   //    // getHumanChoice();
-   //    // getComputerChoice()
-   //    playRound(/*humanSelection, computerSelection*/)
-   // } else {
-   //    return console.log("Game Over!")
-   // }
+  //   for (let i = 0; i < round; i++) {
+         
+  //     humanSelection = getHumanChoice();
+  //  computerSelection = getComputerChoice();
+  //  playRound(humanSelection, computerSelection)
+  //   }
 
-   // for (let round = 0; round < 6; round++) {
-   //    playRound();
-   // }
-
-   /* VARIABLES BELOW ONLY HOLD playRound() RETURN VALUE. THE FUCNCTION HASN'T BEEN CALLED YET */
-   // let round1 = playRound(); 
-   // let round2 = round1 + playRound();
-   // let round3 = playRound();
-   // let round4 = playRound();
-   // let round5 = playRound();
+   
 
    /*COULD TRY A SINGLE ROUND VARIABLE WITH FOR LOOP THAT STOPS WHEN ROUND EQUALS 5. */
    /* EXAMPLE for (let round = 0, round < 5, round++) {playRound()} */
@@ -249,11 +240,12 @@ function playGame(/*round*/) {
    // } else if (computerScore == 3) {
    //    return console.log("Computer Wins!")
    // } else {
-   //    getHumanChoice();
-   //    getComputerChoice();
-   //    playRound()}
+   //   humanSelection = getHumanChoice();
+  //  computerSelection = getComputerChoice();
+  //  playRound(humanSelection, computerSelection)
+  //  }
 
 }
 
 
-// playGame()
+playGame()
