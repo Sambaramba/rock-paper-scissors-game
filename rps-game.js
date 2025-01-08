@@ -15,13 +15,15 @@ function getComputerChoice() {
     }
 };
 
+//TODO: test if below comments would work and make code clearer
+
 function getHumanChoice() {
 
     let userAnswer = prompt(" What are you going to choose? rock,paper or scissors?");
-    let userInputLowercase = userAnswer.toLowerCase();
+    let userInputLowercase = userAnswer.toLowerCase(); //Unnecessary variable? could just update userAnswer
 
 
-    while(userInputLowercase !==  "rock" || "paper" || "scissors") {
+    while(userInputLowercase !==  "rock" || "paper" || "scissors") {// could just do if else statement checking if rock,paper,scissors,if not prompt for answer
 
 
       if (userInputLowercase === "rock") { 
@@ -44,16 +46,15 @@ function getHumanChoice() {
 }
 
 
+/* TODO: add round feature to playGame() function.*/
 
-
-function playGame() {
+function playGame(round) {
 
     let humanScore = 0;
     let computerScore = 0;
 
-  
     function playRound(humanChoice, computerChoice) {
-                
+    
         if (humanChoice === "rock" && computerChoice === "scissors") {
             alert ("YOU WIN! rock beats scissors");
             ++humanScore;
@@ -95,61 +96,65 @@ function playGame() {
             alert ("Score is Human " + humanScore + " : cpu " + computerScore);
             return;
         }
-            
+
         else {
             alert ("It's a draw! play round again");
             humanSelection = getHumanChoice();
             computerSelection = getComputerChoice();
             playRound(humanSelection, computerSelection);
         }
-            
+
     }
+            
+     for (let i = 0; i < round; i++) {
+
+        let humanSelection = getHumanChoice();
+        let computerSelection = getComputerChoice();
+                
+        playRound(humanSelection, computerSelection);  
+     }
+
+    if (humanScore > computerScore) {
+        return alert ("GAME OVER! You beat the computer!");
+    }
+    
+    else if (computerScore > humanScore) {
+        return alert("GAME OVER! You got beaten by the computer!");
+    } 
+    
+    else {"The games a draw"};     
+}
 
         
-let humanSelection = getHumanChoice();
-let computerSelection = getComputerChoice();
-        
-playRound(humanSelection, computerSelection)
+playGame(5);
 
 
 
-humanSelection = getHumanChoice();
-computerSelection = getComputerChoice();
-playRound(humanSelection, computerSelection)
+// humanSelection = getHumanChoice();
+// computerSelection = getComputerChoice();
+// playRound(humanSelection, computerSelection)
 
 
 
-humanSelection = getHumanChoice();
-computerSelection = getComputerChoice();
-playRound(humanSelection, computerSelection)
+// humanSelection = getHumanChoice();
+// computerSelection = getComputerChoice();
+// playRound(humanSelection, computerSelection)
 
 
 
-humanSelection = getHumanChoice();
-computerSelection = getComputerChoice();
-playRound(humanSelection, computerSelection)
+// humanSelection = getHumanChoice();
+// computerSelection = getComputerChoice();
+// playRound(humanSelection, computerSelection)
 
 
-humanSelection = getHumanChoice();
-computerSelection = getComputerChoice();
-playRound(humanSelection, computerSelection)
+// humanSelection = getHumanChoice();
+// computerSelection = getComputerChoice();
+// playRound(humanSelection, computerSelection)
 
 
    /*THINK I CAN GET RID OF THE BELOW ELSE STATEMENT (NOW THAT playRound() ELSE STATEMENT HAS RECURSIVE FUNCTION)*/
 
-if (humanScore > computerScore) {
-    return alert ("GAME OVER! You beat the computer!");
-}
-
-else if (computerScore > humanScore) {
-    return alert("GAME OVER! You got beaten by the computer!");
-} 
-
-else {"The games a draw"};
-
-
-}
 
 
 
-playGame()
+
