@@ -52,6 +52,7 @@ function playGame(round) {
 
     let humanScore = 0;
     let computerScore = 0;
+    let winningScore = round / 2 + 0.5;
 
     function playRound(humanChoice, computerChoice) {
     
@@ -105,24 +106,29 @@ function playGame(round) {
         }
 
     }
-            
-     for (let i = 0; i < round; i++) {
+/*TODO: Get game to stop when either human/cpu gets to requisite rounds*/    
+     for (let i = 0; humanScore < winningScore || computerScore < winningScore; i++) {
 
-        let humanSelection = getHumanChoice();
-        let computerSelection = getComputerChoice();
-                
-        playRound(humanSelection, computerSelection);  
+        if (humanScore === winningScore) {
+            return alert ("GAME OVER! You beat the computer!");
+        } else if (computerScore === winningScore) {
+            return alert("GAME OVER! You got beaten by the computer!");
+        } else {
+            let humanSelection = getHumanChoice();
+            let computerSelection = getComputerChoice();        
+            playRound(humanSelection, computerSelection);
+        } 
      }
 
-    if (humanScore > computerScore) {
-        return alert ("GAME OVER! You beat the computer!");
-    }
+    // if (humanScore > computerScore) {
+    //     return alert ("GAME OVER! You beat the computer!");
+    // }
     
-    else if (computerScore > humanScore) {
-        return alert("GAME OVER! You got beaten by the computer!");
-    } 
+    // else if (computerScore > humanScore) {
+    //     return alert("GAME OVER! You got beaten by the computer!");
+    // } 
     
-    else {"The games a draw"};     
+    // else {"The games a draw"};     
 }
 
         
