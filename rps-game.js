@@ -19,28 +19,28 @@ function getComputerChoice() {
 
 function getHumanChoice() {
 
-    let userAnswer = prompt(" What are you going to choose? rock,paper or scissors?");
-    let userInputLowercase = userAnswer.toLowerCase(); //Unnecessary variable? could just update userAnswer
+    let userAnswer = prompt(" What are you going to choose? rock,paper or scissors?").toLowerCase();
+    // let userInputLowercase = userAnswer.toLowerCase(); //Unnecessary variable? could just update userAnswer
 
 
-    while(userInputLowercase !==  "rock" || "paper" || "scissors") {// could just do if else statement checking if rock,paper,scissors,if not prompt for answer
+    while(userAnswer !==  "rock" || "paper" || "scissors") {// could just do if else statement checking if rock,paper,scissors,if not prompt for answer
 
 
-      if (userInputLowercase === "rock") { 
+      if (userAnswer === "rock") { 
           return "rock";
       }
 
-      else if (userInputLowercase === "paper") {
+      else if (userAnswer === "paper") {
           return "paper";
        }
 
-      else if (userInputLowercase === "scissors") {
+      else if (userAnswer === "scissors") {
           return "scissors";
       }
 
       else { 
-         userAnswer = prompt("That is an unacceptable answer numbnuts, please only type either rock, paper or scissors");
-         userInputLowercase = userAnswer.toLowerCase();
+         userAnswer = prompt("That is an unacceptable answer numbnuts, please only type either rock, paper or scissors").toLowerCase();
+        //  userInputLowercase = userAnswer.toLowerCase();
       }
     }
 }
