@@ -15,15 +15,13 @@ function getComputerChoice() {
     }
 };
 
-//TODO: test if below comments would work and make code clearer
-
 function getHumanChoice() {
 
     let userAnswer = prompt(" What are you going to choose? rock,paper or scissors?").toLowerCase();
-    // let userInputLowercase = userAnswer.toLowerCase(); //Unnecessary variable? could just update userAnswer
+    
 
 
-    while(userAnswer !==  "rock" || "paper" || "scissors") {// could just do if else statement checking if rock,paper,scissors,if not prompt for answer
+    while(userAnswer !==  "rock" || "paper" || "scissors") {
 
 
       if (userAnswer === "rock") { 
@@ -40,13 +38,12 @@ function getHumanChoice() {
 
       else { 
          userAnswer = prompt("That is an unacceptable answer numbnuts, please only type either rock, paper or scissors").toLowerCase();
-        //  userInputLowercase = userAnswer.toLowerCase();
+        
       }
     }
 }
 
 
-/* TODO: add round feature to playGame() function.*/
 
 function playGame(round) {
 
@@ -106,7 +103,7 @@ function playGame(round) {
         }
 
     }
-/*TODO: Get game to stop when either human/cpu gets to requisite rounds*/    
+ 
      for (let i = 0; humanScore < winningScore || computerScore < winningScore; i++) {
 
         if (humanScore === winningScore) {
@@ -118,17 +115,7 @@ function playGame(round) {
             let computerSelection = getComputerChoice();        
             playRound(humanSelection, computerSelection);
         } 
-     }
-
-    // if (humanScore > computerScore) {
-    //     return alert ("GAME OVER! You beat the computer!");
-    // }
-    
-    // else if (computerScore > humanScore) {
-    //     return alert("GAME OVER! You got beaten by the computer!");
-    // } 
-    
-    // else {"The games a draw"};     
+     }   
 }
 
         
