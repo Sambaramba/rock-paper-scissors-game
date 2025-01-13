@@ -2,48 +2,32 @@ function getComputerChoice() {
 
     let computerValue = Math.floor(Math.random() * 3);
 
-    if (computerValue === 0) {
-        return "rock";
-    }
 
-    else if (computerValue === 1) {
-        return "paper";
-    }
+    if (computerValue === 0) {return "rock"}
 
-    else {
-        return "scissors";
-    }
+    else if (computerValue === 1) {return "paper"}
+
+    else {return "scissors"}
 };
 
 function getHumanChoice() {
 
     let userAnswer = prompt(" What are you going to choose? rock,paper or scissors?").toLowerCase();
+
     
-
-
     while(userAnswer !==  "rock" || "paper" || "scissors") {
-
-
-      if (userAnswer === "rock") { 
-          return "rock";
-      }
-
-      else if (userAnswer === "paper") {
-          return "paper";
-       }
-
-      else if (userAnswer === "scissors") {
-          return "scissors";
-      }
-
-      else { 
-         userAnswer = prompt("That is an unacceptable answer numbnuts, please only type either rock, paper or scissors").toLowerCase();
         
-      }
+      if (userAnswer === "rock") { return "rock"}
+
+      else if (userAnswer === "paper") {return "paper"}
+
+      else if (userAnswer === "scissors") {return "scissors"}
+
+      else {userAnswer = prompt("That is an unacceptable answer numbnuts, please only type either rock, paper or scissors").toLowerCase()}
     }
 }
 
-
+/*TODO: add all human win results to if statement and all loses to if else then change round result alert to include expressions*/
 
 function playGame(round) {
 
@@ -59,6 +43,20 @@ function playGame(round) {
             alert ("Score is Human " + humanScore + " : cpu " + computerScore);
             return;
         }
+
+        else if (humanChoice === "scissors" && computerChoice === "paper") {
+            alert ("YOU WIN! scissors beats paper");
+            ++humanScore;
+            alert ("Score is Human " + humanScore + " : cpu " + computerScore);
+            return;
+        }
+
+        else if (humanChoice === "paper" && computerChoice === "rock") {
+            alert ("YOU WIN! paper beats rock");
+            ++humanScore;
+            alert ("Score is Human " + humanScore + " : cpu " + computerScore);
+            return;
+        }
                 
         else if (humanChoice === "rock" && computerChoice === "paper") {
             alert ("YOU LOSE! paper beats rock");
@@ -66,14 +64,7 @@ function playGame(round) {
             alert ("Score is Human " + humanScore + " : cpu " + computerScore);
             return;     
         }
-            
-        else if (humanChoice === "paper" && computerChoice === "rock") {
-            alert ("YOU WIN! paper beats rock");
-            ++humanScore;
-            alert ("Score is Human " + humanScore + " : cpu " + computerScore);
-            return;
-        }
-            
+              
         else if( humanChoice === "paper" && computerChoice ==="scissors") {
             alert ("YOU LOSE! scissors beats paper");
             ++computerScore;
@@ -88,12 +79,7 @@ function playGame(round) {
             return;
         }
             
-        else if (humanChoice === "scissors" && computerChoice === "paper") {
-            alert ("YOU WIN! scissors beats paper");
-            ++humanScore;
-            alert ("Score is Human " + humanScore + " : cpu " + computerScore);
-            return;
-        }
+        
 
         else {
             alert ("It's a draw! play round again");
@@ -101,6 +87,8 @@ function playGame(round) {
             computerSelection = getComputerChoice();
             playRound(humanSelection, computerSelection);
         }
+
+        // ${humanChoice} ${computerChoice}
 
     }
  
