@@ -36,51 +36,30 @@ function playGame(round) {
     let winningScore = round / 2 + 0.5;
 
     function playRound(humanChoice, computerChoice) {
-    
-        if (humanChoice === "rock" && computerChoice === "scissors") {
-            alert ("YOU WIN! rock beats scissors");
-            ++humanScore;
-            alert ("Score is Human " + humanScore + " : cpu " + computerScore);
-            return;
-        }
 
-        else if (humanChoice === "scissors" && computerChoice === "paper") {
-            alert ("YOU WIN! scissors beats paper");
-            ++humanScore;
-            alert ("Score is Human " + humanScore + " : cpu " + computerScore);
-            return;
-        }
+        if (
+            humanChoice === "rock" && computerChoice === "scissors" || 
+            humanChoice === "scissors" && computerChoice === "paper" || 
+            humanChoice === "paper" && computerChoice === "rock") { 
 
-        else if (humanChoice === "paper" && computerChoice === "rock") {
-            alert ("YOU WIN! paper beats rock");
+            alert (`YOU WIN! ${humanChoice} beats ${computerChoice}`);
             ++humanScore;
             alert ("Score is Human " + humanScore + " : cpu " + computerScore);
             return;
-        }
-                
-        else if (humanChoice === "rock" && computerChoice === "paper") {
-            alert ("YOU LOSE! paper beats rock");
-            ++computerScore;
-            alert ("Score is Human " + humanScore + " : cpu " + computerScore);
-            return;     
-        }
-              
-        else if( humanChoice === "paper" && computerChoice ==="scissors") {
-            alert ("YOU LOSE! scissors beats paper");
-            ++computerScore;
-            alert ("Score is Human " + humanScore + " : cpu " + computerScore);
-            return;
-        }
-            
-        else if(humanChoice === "scissors" && computerChoice === "rock") {
-            alert ("YOU LOSE! rock beats scissors");
-            ++computerScore;
-            alert ("Score is Human " + humanScore + ": cpu " + computerScore);
-            return;
-        }
-            
+
+        } 
         
+        else if (
+            humanChoice === "rock" && computerChoice === "paper" ||
+            humanChoice === "paper" && computerChoice ==="scissors" ||
+            humanChoice === "scissors" && computerChoice === "rock") {
 
+            alert (`YOU LOSE! ${humanChoice} beats ${computerChoice}`);
+            ++computerScore;
+            alert ("Score is Human " + humanScore + " : cpu " + computerScore);
+            return; 
+        } 
+        
         else {
             alert ("It's a draw! play round again");
             humanSelection = getHumanChoice();
@@ -88,7 +67,6 @@ function playGame(round) {
             playRound(humanSelection, computerSelection);
         }
 
-        // ${humanChoice} ${computerChoice}
 
     }
  
@@ -96,9 +74,11 @@ function playGame(round) {
 
         if (humanScore === winningScore) {
             return alert ("GAME OVER! You beat the computer!");
-        } else if (computerScore === winningScore) {
+        } 
+        else if (computerScore === winningScore) {
             return alert("GAME OVER! You got beaten by the computer!");
-        } else {
+        } 
+        else {
             let humanSelection = getHumanChoice();
             let computerSelection = getComputerChoice();        
             playRound(humanSelection, computerSelection);
@@ -132,8 +112,6 @@ playGame(5);
 // computerSelection = getComputerChoice();
 // playRound(humanSelection, computerSelection)
 
-
-   /*THINK I CAN GET RID OF THE BELOW ELSE STATEMENT (NOW THAT playRound() ELSE STATEMENT HAS RECURSIVE FUNCTION)*/
 
 
 
