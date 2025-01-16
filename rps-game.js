@@ -15,25 +15,15 @@ function getComputerChoice() {
 function getHumanChoice() {
 
     let userAnswer = prompt(" What are you going to choose? rock,paper or scissors?").toLowerCase();
+  
+    while (userAnswer !== "rock" && userAnswer !== "paper" && userAnswer !== "scissors") {
+        userAnswer = prompt("That is an unacceptable answer numbnuts, please only type either rock, paper or scissors").toLowerCase()
+   }
 
-    
-    while(userAnswer !==  "rock" || "paper" || "scissors") {
-        
-      if (userAnswer === "rock") { return "rock"}
-
-      else if (userAnswer === "paper") {return "paper"}
-
-      else if (userAnswer === "scissors") {return "scissors"}
-
-      else {userAnswer = prompt("That is an unacceptable answer numbnuts, please only type either rock, paper or scissors").toLowerCase()}
-    }
+   return userAnswer;
 }
 
-if (userAnswer === "rock" && userAnswer === "paper" && userAnswer === "scissors") {
-     return userAnswer = prompt("That is an unacceptable answer numbnuts, please only type either rock, paper or scissors").toLowerCase()
-} else { 
-    userAnswer = prompt("That is an unacceptable answer numbnuts, please only type either rock, paper or scissors").toLowerCase();
-}
+
 /*TODO: add all human win results to if statement and all loses to if else then change round result alert to include expressions*/
 
 function playGame(round) {
@@ -49,9 +39,9 @@ function playGame(round) {
             humanChoice === "scissors" && computerChoice === "paper" || 
             humanChoice === "paper" && computerChoice === "rock") { 
 
-            alert (`YOU WIN! ${humanChoice} beats ${computerChoice}`);
+            console.log(`YOU WIN! ${humanChoice} beats ${computerChoice}`);
             ++humanScore;
-            alert ("Score is Human " + humanScore + " : cpu " + computerScore);
+            console.log("Score is Human " + humanScore + " : cpu " + computerScore);
             return;
 
         } 
@@ -61,14 +51,14 @@ function playGame(round) {
             humanChoice === "paper" && computerChoice ==="scissors" ||
             humanChoice === "scissors" && computerChoice === "rock") {
 
-            alert (`YOU LOSE! ${humanChoice} beats ${computerChoice}`);
+            console.log(`YOU LOSE! ${humanChoice} beats ${computerChoice}`);
             ++computerScore;
-            alert ("Score is Human " + humanScore + " : cpu " + computerScore);
+            console.log("Score is Human " + humanScore + " : cpu " + computerScore);
             return; 
         } 
         
         else {
-            alert ("It's a draw! play round again");
+            console.log("It's a draw! play round again");
             humanSelection = getHumanChoice();
             computerSelection = getComputerChoice();
             playRound(humanSelection, computerSelection);
@@ -77,13 +67,15 @@ function playGame(round) {
 
     }
  
-     for (let i = 0; humanScore < winningScore || computerScore < winningScore; i++) {
+     for (let i = 0; i < round; i++) {
 
         if (humanScore === winningScore) {
-            return alert ("GAME OVER! You beat the computer!");
+            return console.log("GAME OVER! You beat the computer!");
+            
         } 
         else if (computerScore === winningScore) {
-            return alert("GAME OVER! You got beaten by the computer!");
+            return console.log("GAME OVER! You got beaten by the computer!");
+            
         } 
         else {
             let humanSelection = getHumanChoice();
