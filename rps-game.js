@@ -10,6 +10,8 @@ function getComputerChoice() {
     else {return "scissors"}
 };
 
+/*TODO: correct while condition  then think can remove if statement and put return statement after while loop */
+
 function getHumanChoice() {
 
     let userAnswer = prompt(" What are you going to choose? rock,paper or scissors?").toLowerCase();
@@ -27,6 +29,11 @@ function getHumanChoice() {
     }
 }
 
+if (userAnswer === "rock" && userAnswer === "paper" && userAnswer === "scissors") {
+     return userAnswer = prompt("That is an unacceptable answer numbnuts, please only type either rock, paper or scissors").toLowerCase()
+} else { 
+    userAnswer = prompt("That is an unacceptable answer numbnuts, please only type either rock, paper or scissors").toLowerCase();
+}
 /*TODO: add all human win results to if statement and all loses to if else then change round result alert to include expressions*/
 
 function playGame(round) {
