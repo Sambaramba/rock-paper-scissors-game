@@ -54,7 +54,7 @@ function playGame(round) {
             console.log(`YOU LOSE! ${humanChoice} beats ${computerChoice}`);
             ++computerScore;
             console.log("Score is Human " + humanScore + " : cpu " + computerScore);
-            return; 
+            return;
         } 
         
         else {
@@ -70,12 +70,12 @@ function playGame(round) {
      for (let i = 0; i < round; i++) {
 
         if (humanScore === winningScore) {
-            return console.log("GAME OVER! You beat the computer!");
-            
+            console.log("GAME OVER! You beat the computer!");
+            return;
         } 
         else if (computerScore === winningScore) {
-            return console.log("GAME OVER! You got beaten by the computer!");
-            
+            console.log("GAME OVER! You got beaten by the computer!");
+            return;
         } 
         else {
             let humanSelection = getHumanChoice();
