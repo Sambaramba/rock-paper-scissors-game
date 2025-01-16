@@ -23,11 +23,11 @@ function getHumanChoice() {
 }
 
 
-function playGame(round) {
+function playGame() {
 
     let humanScore = 0;
     let computerScore = 0;
-    let winningScore = round / 2 + 0.5;
+    // let winningScore = round / 2 + 0.5;
 
     function playRound(humanChoice, computerChoice) {
 
@@ -94,11 +94,11 @@ function playGame(round) {
 
 
     if (humanScore > computerScore) {
-        return alert ("GAME OVER! You beat the computer!");
+        return console.log("GAME OVER! You beat the computer!");
     }
     
     else if (computerScore > humanScore) {
-        return alert("GAME OVER! You got beaten by the computer!");
+        return console.log("GAME OVER! You got beaten by the computer!");
     } 
     
     else {"The games a draw"};
@@ -122,14 +122,7 @@ function playGame(round) {
 }
 
         
-playGame(5);
-
-
-
-
-
-
-   /*THINK I CAN GET RID OF THE BELOW ELSE STATEMENT (NOW THAT playRound() ELSE STATEMENT HAS RECURSIVE FUNCTION)*/
+playGame();
 
 
 
