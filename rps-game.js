@@ -2,7 +2,6 @@ function getComputerChoice() {
 
     let computerValue = Math.floor(Math.random() * 3);
 
-
     if (computerValue === 0) {return "rock"}
 
     else if (computerValue === 1) {return "paper"}
@@ -10,7 +9,7 @@ function getComputerChoice() {
     else {return "scissors"}
 };
 
-/*TODO: correct while condition  then think can remove if statement and put return statement after while loop */
+
 
 function getHumanChoice() {
 
@@ -23,8 +22,6 @@ function getHumanChoice() {
    return userAnswer;
 }
 
-
-/*TODO: add all human win results to if statement and all loses to if else then change round result alert to include expressions*/
 
 function playGame(round) {
 
