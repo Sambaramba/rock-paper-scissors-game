@@ -63,23 +63,62 @@ function playGame(round) {
 
 
     }
- 
-     for (let i = 0; i < round; i++) {
 
-        if (humanScore === winningScore) {
-            console.log("GAME OVER! You beat the computer!");
-            return;
-        } 
-        else if (computerScore === winningScore) {
-            console.log("GAME OVER! You got beaten by the computer!");
-            return;
-        } 
-        else {
-            let humanSelection = getHumanChoice();
-            let computerSelection = getComputerChoice();        
-            playRound(humanSelection, computerSelection);
-        } 
-     }   
+    let humanSelection = getHumanChoice();
+    let computerSelection = getComputerChoice();      
+    playRound(humanSelection, computerSelection);
+
+
+
+    humanSelection = getHumanChoice();
+    computerSelection = getComputerChoice();
+    playRound(humanSelection, computerSelection);
+
+
+
+    humanSelection = getHumanChoice();
+    computerSelection = getComputerChoice();
+    playRound(humanSelection, computerSelection);
+
+
+
+    humanSelection = getHumanChoice();
+    computerSelection = getComputerChoice();
+    playRound(humanSelection, computerSelection);
+
+
+    humanSelection = getHumanChoice();
+    computerSelection = getComputerChoice();
+    playRound(humanSelection, computerSelection);
+
+
+
+    if (humanScore > computerScore) {
+        return alert ("GAME OVER! You beat the computer!");
+    }
+    
+    else if (computerScore > humanScore) {
+        return alert("GAME OVER! You got beaten by the computer!");
+    } 
+    
+    else {"The games a draw"};
+ 
+    //  for (let i = 0; i < round; i++) {
+
+    //     if (humanScore === winningScore) {
+    //         console.log("GAME OVER! You beat the computer!");
+    //         return;
+    //     } 
+    //     else if (computerScore === winningScore) {
+    //         console.log("GAME OVER! You got beaten by the computer!");
+    //         return;
+    //     } 
+    //     else {
+    //         let humanSelection = getHumanChoice();
+    //         let computerSelection = getComputerChoice();        
+    //         playRound(humanSelection, computerSelection);
+    //     } 
+    //  }   
 }
 
         
@@ -87,26 +126,12 @@ playGame(5);
 
 
 
-// humanSelection = getHumanChoice();
-// computerSelection = getComputerChoice();
-// playRound(humanSelection, computerSelection)
 
 
 
-// humanSelection = getHumanChoice();
-// computerSelection = getComputerChoice();
-// playRound(humanSelection, computerSelection)
+   /*THINK I CAN GET RID OF THE BELOW ELSE STATEMENT (NOW THAT playRound() ELSE STATEMENT HAS RECURSIVE FUNCTION)*/
 
 
-
-// humanSelection = getHumanChoice();
-// computerSelection = getComputerChoice();
-// playRound(humanSelection, computerSelection)
-
-
-// humanSelection = getHumanChoice();
-// computerSelection = getComputerChoice();
-// playRound(humanSelection, computerSelection)
 
 
 
