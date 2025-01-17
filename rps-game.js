@@ -16,10 +16,10 @@ function getHumanChoice() {
     let userAnswer = prompt(" What are you going to choose? rock,paper or scissors?").toLowerCase();
   
     while (userAnswer !== "rock" && userAnswer !== "paper" && userAnswer !== "scissors") {
-        userAnswer = prompt("That is an unacceptable answer numbnuts, please only type either rock, paper or scissors").toLowerCase()
-   }
+        userAnswer = prompt("That is an unacceptable answer numbnuts, please only type either rock, paper or scissors").toLowerCase();
+    }
 
-   return userAnswer;
+    return userAnswer;
 }
 
 
@@ -70,26 +70,26 @@ function playGame() {
 
 
 
-    humanSelection = getHumanChoice();
-    computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
+    // humanSelection = getHumanChoice();
+    // computerSelection = getComputerChoice();
+    // playRound(humanSelection, computerSelection);
 
 
 
-    humanSelection = getHumanChoice();
-    computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
+    // humanSelection = getHumanChoice();
+    // computerSelection = getComputerChoice();
+    // playRound(humanSelection, computerSelection);
 
 
 
-    humanSelection = getHumanChoice();
-    computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
+    // humanSelection = getHumanChoice();
+    // computerSelection = getComputerChoice();
+    // playRound(humanSelection, computerSelection);
 
 
-    humanSelection = getHumanChoice();
-    computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
+    // humanSelection = getHumanChoice();
+    // computerSelection = getComputerChoice();
+    // playRound(humanSelection, computerSelection);
 
 
 
