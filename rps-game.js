@@ -124,10 +124,12 @@ function playGame() {
         
 playGame();
 
+/*Added below code end of last session but no commit*/
+/*changed button variable to buttons*/
+/*if doing forEach does it add an event listener to each so user could input multiple answers*/
 
-
-
-
-
-
+let buttons = document.querySelectorAll("button");
+buttons.addEventListener("click", () => {
+     
+})
 
