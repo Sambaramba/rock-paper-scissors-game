@@ -10,7 +10,7 @@ function getComputerChoice() {
 };
 
 
-
+/* TODO: change getHumanChoice to attach buttons to event listener somehow*/
 function getHumanChoice() {
 
     let userAnswer = prompt(" What are you going to choose? rock,paper or scissors?").toLowerCase();
@@ -91,7 +91,7 @@ function playGame() {
     // computerSelection = getComputerChoice();
     // playRound(humanSelection, computerSelection);
 
-
+/*TODO: change below code to be first to 5*/
 
     if (humanScore > computerScore) {
         return console.log("GAME OVER! You beat the computer!");
@@ -129,7 +129,7 @@ playGame();
 /*if doing forEach does it add an event listener to each so user could input multiple answers*/
 
 let buttons = document.querySelectorAll("button");
-buttons.addEventListener("click", () => {
+buttons.addEventListener("click", (event) => {
      
 })
 
