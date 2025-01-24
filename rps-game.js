@@ -99,7 +99,7 @@ function playGame() {
     
     else if (computerScore === 5 ) {
         return console.log("GAME OVER! You got beaten by the computer!");
-    } 
+    } else {}
 
  
     //  for (let i = 0; i < round; i++) {
