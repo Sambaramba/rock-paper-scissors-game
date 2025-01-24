@@ -11,16 +11,16 @@ function getComputerChoice() {
 
 
 /* TODO: change getHumanChoice to attach buttons to event listener somehow*/
-function getHumanChoice() {
+// function getHumanChoice() {
 
-    let userAnswer = prompt(" What are you going to choose? rock,paper or scissors?").toLowerCase();
+//     let userAnswer = prompt(" What are you going to choose? rock,paper or scissors?").toLowerCase();
   
-    while (userAnswer !== "rock" && userAnswer !== "paper" && userAnswer !== "scissors") {
-        userAnswer = prompt("That is an unacceptable answer numbnuts, please only type either rock, paper or scissors").toLowerCase();
-    }
+//     while (userAnswer !== "rock" && userAnswer !== "paper" && userAnswer !== "scissors") {
+//         userAnswer = prompt("That is an unacceptable answer numbnuts, please only type either rock, paper or scissors").toLowerCase();
+//     }
 
-    return userAnswer;
-}
+//     return userAnswer;
+// }
 
 
 function playGame() {
@@ -56,15 +56,15 @@ function playGame() {
         
         else {
             console.log("It's a draw! play round again");
-            humanSelection = getHumanChoice();
-            computerSelection = getComputerChoice();
-            playRound(humanSelection, computerSelection);
+            // humanSelection = getHumanChoice();
+            // computerSelection = getComputerChoice();
+            // playRound(humanSelection, computerSelection);
         }
 
 
     }
 
-    let humanSelection = getHumanChoice();
+    let humanSelection;  //= getHumanChoice();
     let computerSelection = getComputerChoice();      
     playRound(humanSelection, computerSelection);
 
@@ -92,6 +92,7 @@ function playGame() {
     // playRound(humanSelection, computerSelection);
 
 /*TODO: change below code to be first to 5*/
+/*TODO: then add play round to else statement and remove string*/
 
     if (humanScore > computerScore) {
         return console.log("GAME OVER! You beat the computer!");
@@ -121,15 +122,20 @@ function playGame() {
     //  }   
 }
 
+let buttons = document.querySelectorAll("button");
+buttons.forEach((button) => {
+    button.addEventListener("click", () =>  {
+        humanSelection = button.id;
+    });
+     
+});
         
-playGame();
+// playGame();
 
 /*Added below code end of last session but no commit*/
 /*changed button variable to buttons*/
 /*if doing forEach does it add an event listener to each so user could input multiple answers*/
+/*Would adding for each inbetween buttons and eventlistener work*/
 
-let buttons = document.querySelectorAll("button");
-buttons.addEventListener("click", (event) => {
-     
-})
+
 
