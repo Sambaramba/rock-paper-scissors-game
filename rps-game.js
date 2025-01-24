@@ -92,17 +92,15 @@ function playGame() {
     // playRound(humanSelection, computerSelection);
 
 /*TODO: change below code to be first to 5*/
-/*TODO: then add play round to else statement and remove string*/
 
-    if (humanScore > computerScore) {
+    if (humanScore === 5) {
         return console.log("GAME OVER! You beat the computer!");
     }
     
-    else if (computerScore > humanScore) {
+    else if (computerScore === 5 ) {
         return console.log("GAME OVER! You got beaten by the computer!");
     } 
-    
-    else {"The games a draw"};
+
  
     //  for (let i = 0; i < round; i++) {
 
