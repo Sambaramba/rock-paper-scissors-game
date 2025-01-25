@@ -22,51 +22,93 @@ function getComputerChoice() {
 //     return userAnswer;
 // }
 
+function playRound(humanChoice, computerChoice) {
 
-function playGame() {
+    if (
+        humanChoice === "rock" && computerChoice === "scissors" || 
+        humanChoice === "scissors" && computerChoice === "paper" || 
+        humanChoice === "paper" && computerChoice === "rock") { 
 
-    let humanScore = 0;
-    let computerScore = 0;
-    // let winningScore = round / 2 + 0.5;
+        console.log(`YOU WIN! ${humanChoice} beats ${computerChoice}`);
+        ++humanScore;
+        console.log("Score is Human " + humanScore + " : cpu " + computerScore);
+        return;
 
-    function playRound(humanChoice, computerChoice) {
+    } 
+    
+    else if (
+        humanChoice === "rock" && computerChoice === "paper" ||
+        humanChoice === "paper" && computerChoice ==="scissors" ||
+        humanChoice === "scissors" && computerChoice === "rock") {
 
-        if (
-            humanChoice === "rock" && computerChoice === "scissors" || 
-            humanChoice === "scissors" && computerChoice === "paper" || 
-            humanChoice === "paper" && computerChoice === "rock") { 
-
-            console.log(`YOU WIN! ${humanChoice} beats ${computerChoice}`);
-            ++humanScore;
-            console.log("Score is Human " + humanScore + " : cpu " + computerScore);
-            return;
-
-        } 
-        
-        else if (
-            humanChoice === "rock" && computerChoice === "paper" ||
-            humanChoice === "paper" && computerChoice ==="scissors" ||
-            humanChoice === "scissors" && computerChoice === "rock") {
-
-            console.log(`YOU LOSE! ${humanChoice} beats ${computerChoice}`);
-            ++computerScore;
-            console.log("Score is Human " + humanScore + " : cpu " + computerScore);
-            return;
-        } 
-        
-        else {
-            console.log("It's a draw! play round again");
-            // humanSelection = getHumanChoice();
-            // computerSelection = getComputerChoice();
-            // playRound(humanSelection, computerSelection);
-        }
-
-
+        console.log(`YOU LOSE! ${humanChoice} beats ${computerChoice}`);
+        ++computerScore;
+        console.log("Score is Human " + humanScore + " : cpu " + computerScore);
+        return;
+    } 
+    
+    else {
+        console.log("It's a draw! play round again");
+        // humanSelection = getHumanChoice();
+        // computerSelection = getComputerChoice();
+        // playRound(humanSelection, computerSelection);
     }
 
-    let humanSelection;  //= getHumanChoice();
-    let computerSelection = getComputerChoice();      
+    let buttons = document.querySelectorAll("button");
+    buttons.forEach((button) => {
+        button.addEventListener("click", () =>  {
+            humanSelection = button.id;
+        });
+         
+    });
+    
     playRound(humanSelection, computerSelection);
+
+
+// function playGame() {
+
+//     let humanScore = 0;
+//     let computerScore = 0;
+//     // let winningScore = round / 2 + 0.5;
+
+//     function playRound(humanChoice, computerChoice) {
+
+//         if (
+//             humanChoice === "rock" && computerChoice === "scissors" || 
+//             humanChoice === "scissors" && computerChoice === "paper" || 
+//             humanChoice === "paper" && computerChoice === "rock") { 
+
+//             console.log(`YOU WIN! ${humanChoice} beats ${computerChoice}`);
+//             ++humanScore;
+//             console.log("Score is Human " + humanScore + " : cpu " + computerScore);
+//             return;
+
+//         } 
+        
+//         else if (
+//             humanChoice === "rock" && computerChoice === "paper" ||
+//             humanChoice === "paper" && computerChoice ==="scissors" ||
+//             humanChoice === "scissors" && computerChoice === "rock") {
+
+//             console.log(`YOU LOSE! ${humanChoice} beats ${computerChoice}`);
+//             ++computerScore;
+//             console.log("Score is Human " + humanScore + " : cpu " + computerScore);
+//             return;
+//         } 
+        
+//         else {
+//             console.log("It's a draw! play round again");
+//             // humanSelection = getHumanChoice();
+//             // computerSelection = getComputerChoice();
+//             // playRound(humanSelection, computerSelection);
+//         }
+
+
+//     }
+
+    // let humanSelection;  //= getHumanChoice();
+    // let computerSelection = getComputerChoice();      
+    // playRound(humanSelection, computerSelection);
 
 
 
@@ -93,13 +135,13 @@ function playGame() {
 
 /*TODO: change below code to be first to 5*/
 
-    if (humanScore === 5) {
-        return console.log("GAME OVER! You beat the computer!");
-    }
+    // if (humanScore === 5) {
+    //     return console.log("GAME OVER! You beat the computer!");
+    // }
     
-    else if (computerScore === 5 ) {
-        return console.log("GAME OVER! You got beaten by the computer!");
-    } else {}
+    // else if (computerScore === 5 ) {
+    //     return console.log("GAME OVER! You got beaten by the computer!");
+    // } else {}
 
  
     //  for (let i = 0; i < round; i++) {
@@ -120,13 +162,15 @@ function playGame() {
     //  }   
 }
 
-let buttons = document.querySelectorAll("button");
-buttons.forEach((button) => {
-    button.addEventListener("click", () =>  {
-        humanSelection = button.id;
-    });
+// let buttons = document.querySelectorAll("button");
+// buttons.forEach((button) => {
+//     button.addEventListener("click", () =>  {
+//         humanSelection = button.id;
+//     });
      
-});
+// });
+
+// playRound(humanSelection, computerSelection);
         
 // playGame();
 
