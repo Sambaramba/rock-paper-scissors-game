@@ -9,7 +9,7 @@ function getComputerChoice() {
     else {return "scissors"}
 };
 
-
+// console.log(getComputerChoice());
 /* TODO: change getHumanChoice to attach buttons to event listener somehow*/
 // function getHumanChoice() {
 
@@ -21,6 +21,9 @@ function getComputerChoice() {
 
 //     return userAnswer;
 // }
+
+let humanScore = 0;
+let computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
 
@@ -49,20 +52,26 @@ function playRound(humanChoice, computerChoice) {
     
     else {
         console.log("It's a draw! play round again");
-        // humanSelection = getHumanChoice();
-        // computerSelection = getComputerChoice();
-        // playRound(humanSelection, computerSelection);
     }
 
+}
+
+    let humanSelection;
+    let computerSelection;
     let buttons = document.querySelectorAll("button");
     buttons.forEach((button) => {
-        button.addEventListener("click", () =>  {
+        
+        button.addEventListener("click", () => {
             humanSelection = button.id;
-        });
-         
+            computerSelection = getComputerChoice();
+            playRound(humanSelection, computerSelection);
+        } );
     });
+
     
-    playRound(humanSelection, computerSelection);
+    
+    // console.log(humanSelection);
+    // console.log(playRound(humanSelection, computerSelection));
 
 
 // function playGame() {
@@ -160,7 +169,7 @@ function playRound(humanChoice, computerChoice) {
     //         playRound(humanSelection, computerSelection);
     //     } 
     //  }   
-}
+// }
 
 // let buttons = document.querySelectorAll("button");
 // buttons.forEach((button) => {
