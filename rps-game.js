@@ -22,6 +22,9 @@ function getComputerChoice() {
 //     return userAnswer;
 // }
 
+let displayText = document.querySelector("#displayText");
+displayText.textContent = "Hello World";
+
 let humanScore = 0;
 let computerScore = 0;
 
@@ -32,7 +35,7 @@ function playRound(humanChoice, computerChoice) {
         humanChoice === "scissors" && computerChoice === "paper" || 
         humanChoice === "paper" && computerChoice === "rock") { 
 
-        console.log(`YOU WIN! ${humanChoice} beats ${computerChoice}`);
+        displayText.textContent = `YOU WIN! ${humanChoice} beats ${computerChoice}`;
         ++humanScore;
         console.log("Score is Human " + humanScore + " : cpu " + computerScore);
         return;
@@ -67,6 +70,10 @@ function playRound(humanChoice, computerChoice) {
             playRound(humanSelection, computerSelection);
         } );
     });
+
+
+
+    displayT
 
     
     
