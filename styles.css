@@ -28,6 +28,10 @@ button {
 
 #displayText {
     /* display: block; */
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+    border: 1px solid black;
 }
 
 #rpsButtonContainer {
