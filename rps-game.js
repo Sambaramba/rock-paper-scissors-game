@@ -23,10 +23,13 @@ function getComputerChoice() {
 // }
 
 let displayText = document.querySelector("#displayText");
-displayText.textContent = " What are you going to choose? rock,paper or scissors?";
+let score = document.querySelector("#scoreText");
+scoreText.textContent = " What are you going to choose? rock,paper or scissors?";
 
 let humanScore = 0;
 let computerScore = 0;
+
+displayText.textContent = `Score \n Human ${humanScore}  :  cpu ${computerScore}`;
 
 function playRound(humanChoice, computerChoice) {
 
@@ -37,7 +40,7 @@ function playRound(humanChoice, computerChoice) {
 
         displayText.textContent = `YOU WIN! ${humanChoice} beats ${computerChoice}`;
         ++humanScore;
-        displayText.textContent = "Score is Human " + humanScore + " : cpu " + computerScore;
+        displayText.textContent = `Score \n Human ${humanScore}  :  cpu ${computerScore}`;
         return;
 
     } 
@@ -49,7 +52,7 @@ function playRound(humanChoice, computerChoice) {
 
         displayText.textContent = `YOU LOSE! ${computerChoice} beats ${humanChoice}`;
         ++computerScore;
-        displayText.textContent = "Score is Human " + humanScore + " : cpu " + computerScore;
+        displayText.textContent = "Score \n" + "Human " + humanScore + " : cpu " + computerScore;
         return;
     } 
     
