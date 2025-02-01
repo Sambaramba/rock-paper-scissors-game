@@ -77,7 +77,8 @@ let buttons = document.querySelectorAll("button");
 
 
 /*TODO: change below code so if and else if displays text*/
-/*TODO: after statement is displayed end game and restart*/
+/*TODO: after statement is displayed end game and restart
+   .....try whilst computer score && humanscore below 5 for buttons event listener*/
 
     if (humanScore === 5) {
         displayText.textContent = "GAME OVER! You beat the computer!";
