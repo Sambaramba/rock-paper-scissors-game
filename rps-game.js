@@ -21,24 +21,23 @@ function getComputerChoice() {
 
 //     return userAnswer;
 // }
-let displayText = document.querySelector("#displayText");
-let score = document.querySelector("#scoreText");
-displayText.textContent = " What are you going to choose? rock,paper or scissors?";
 
 
 
     
-    
-    // console.log(humanSelection);
-    // console.log(playRound(humanSelection, computerSelection));
 
 
 function playGame() {
 
-let humanScore = 0;
-let computerScore = 0;
 
-scoreText.textContent = `Score \n Human ${humanScore}  :  cpu ${computerScore}`;
+    let humanScore = 0;
+    let computerScore = 0;
+    
+    let displayText = document.querySelector("#displayText");
+    let scoreText = document.querySelector("#scoreText");
+    displayText.textContent = " What are you going to choose? rock,paper or scissors?";
+    scoreText.textContent = `Score \n Human ${humanScore}  :  cpu ${computerScore}`;
+
 
 function playRound(humanChoice, computerChoice) {
 
@@ -92,11 +91,13 @@ buttons.forEach((button) => {
     
     else if (computerScore === 5 ) {
         return console.log("GAME OVER! You got beaten by the computer!");
-    } else {}
+    }
 
  
   
 }
+
+playGame();
 
 // let buttons = document.querySelectorAll("button");
 // buttons.forEach((button) => {
