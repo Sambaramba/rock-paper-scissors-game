@@ -6,10 +6,12 @@ body {
     display: flex;
     height: 100vh;
     width: 100vw;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 5%;
     background-color: #23ab44;
+    /* flex-wrap: wrap; */
 }
 
 button {
@@ -22,4 +24,13 @@ button {
     width: 180px;
     font-size: 30px;
     
+}
+
+#displayText {
+    /* display: block; */
+}
+
+#rpsButtonContainer {
+    display: flex;
+    gap: 5%;
 }
