@@ -17,6 +17,8 @@ body {
 button {
     cursor: pointer;
     border-radius: 10px;
+    background-color: #621b62;
+    color: yellow;
 }
 
 .medium {
@@ -34,6 +36,8 @@ button {
     border: 1px solid black;
     white-space: pre-line;
     text-align: center;
+    background-color: #621b62;
+    color: yellow;
 }
 
 #rpsButtonContainer {
