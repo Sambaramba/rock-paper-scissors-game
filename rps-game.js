@@ -73,24 +73,27 @@ function playRound(humanChoice, computerChoice) {
 let humanSelection;
 let computerSelection;
 let buttons = document.querySelectorAll("button");
-buttons.forEach((button) => {
-    
-    button.addEventListener("click", () => {
-        humanSelection = button.id;
-        computerSelection = getComputerChoice();
-        playRound(humanSelection, computerSelection);
-    } );
-});
 
-/*TODO: change below code to be first to 5*/
-// scoreText.textContent = 
+
+
+/*TODO: change below code so if and else if displays text*/
+/*TODO: after statement is displayed end game and restart*/
 
     if (humanScore === 5) {
-        return console.log("GAME OVER! You beat the computer!");
+        displayText.textContent = "GAME OVER! You beat the computer!";
     }
     
     else if (computerScore === 5 ) {
-        return console.log("GAME OVER! You got beaten by the computer!");
+        displayText.textContent = "GAME OVER! You got beaten by the computer!";
+    } else {
+        buttons.forEach((button) => {
+    
+            button.addEventListener("click", () => {
+                humanSelection = button.id;
+                computerSelection = getComputerChoice();
+                playRound(humanSelection, computerSelection);
+            } );
+        });
     }
 
  
