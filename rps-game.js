@@ -39,67 +39,74 @@ function playGame() {
     scoreText.textContent = `Score \n Human ${humanScore}  :  cpu ${computerScore}`;
 
 
-function playRound(humanChoice, computerChoice) {
+    function playRound(humanChoice, computerChoice) {
 
-    if (
-        humanChoice === "rock" && computerChoice === "scissors" || 
-        humanChoice === "scissors" && computerChoice === "paper" || 
-        humanChoice === "paper" && computerChoice === "rock") { 
+        if (
+            humanChoice === "rock" && computerChoice === "scissors" || 
+            humanChoice === "scissors" && computerChoice === "paper" || 
+            humanChoice === "paper" && computerChoice === "rock") { 
 
-        displayText.textContent = `YOU WIN! ${humanChoice} beats ${computerChoice}`;
-        ++humanScore;
-        scoreText.textContent = `Score \n Human ${humanScore}  :  cpu ${computerScore}`;
-        return;
+            displayText.textContent = `YOU WIN! ${humanChoice} beats ${computerChoice}`;
+            ++humanScore;
+            scoreText.textContent = `Score \n Human ${humanScore}  :  cpu ${computerScore}`;
+            return;
 
-    } 
-    
-    else if (
-        humanChoice === "rock" && computerChoice === "paper" ||
-        humanChoice === "paper" && computerChoice ==="scissors" ||
-        humanChoice === "scissors" && computerChoice === "rock") {
+        } 
+        
+        else if (
+            humanChoice === "rock" && computerChoice === "paper" ||
+            humanChoice === "paper" && computerChoice ==="scissors" ||
+            humanChoice === "scissors" && computerChoice === "rock") {
 
-        displayText.textContent = `YOU LOSE! ${computerChoice} beats ${humanChoice}`;
-        ++computerScore;
-        scoreText.textContent = "Score \n" + "Human " + humanScore + " : cpu " + computerScore;
-        return;
-    } 
-    
-    else {
-        displayText.textContent = "It's a draw! play round again";
-    }
+            displayText.textContent = `YOU LOSE! ${computerChoice} beats ${humanChoice}`;
+            ++computerScore;
+            scoreText.textContent = "Score \n" + "Human " + humanScore + " : cpu " + computerScore;
+            return;
+        } 
+        
+        else {
+            displayText.textContent = "It's a draw! play round again";
+        }
+    };
 
-}
 
-let humanSelection;
-let computerSelection;
-let buttons = document.querySelectorAll("button");
+
+    let humanSelection;
+    let computerSelection;
+    let buttons = document.querySelectorAll("button");
 
 
 
 /*TODO: change below code so if and else if displays text*/
-/*TODO: after statement is displayed end game and restart
-   .....try whilst computer score && humanscore below 5 for buttons event listener*/
+/*TODO: after statement is displayed end game and restart*/
+  
 
-    if (humanScore === 5) {
-        displayText.textContent = "GAME OVER! You beat the computer!";
-    }
     
-    else if (computerScore === 5 ) {
-        displayText.textContent = "GAME OVER! You got beaten by the computer!";
-    } else {
+        
+    
+   if (humanScore >= 5) {
+    displayText.textContent = "GAME OVER! You beat the computer!";
+   } else if (computerScore >= 5) {
+    displayText.textContent = "GAME OVER! You got beaten by the computer!";
+   }  else {
         buttons.forEach((button) => {
-    
+
             button.addEventListener("click", () => {
-                humanSelection = button.id;
-                computerSelection = getComputerChoice();
-                playRound(humanSelection, computerSelection);
+                if (humanScore < 5 && computerScore < 5) {
+                    humanSelection = button.id;
+                    computerSelection = getComputerChoice();
+                    playRound(humanSelection, computerSelection);
+                }
             } );
         });
     }
+}
 
+    
  
   
-}
+
+
 
 playGame();
 
