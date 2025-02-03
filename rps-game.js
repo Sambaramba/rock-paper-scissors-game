@@ -76,56 +76,33 @@ function playGame() {
     let buttons = document.querySelectorAll("button");
 
 
-
-/*TODO: change below code so if and else if displays text*/
 /*TODO: after statement is displayed end game and restart*/
-  
 
-    
-        
-    
-   if (humanScore >= 5) {
-    displayText.textContent = "GAME OVER! You beat the computer!";
-   } else if (computerScore >= 5) {
-    displayText.textContent = "GAME OVER! You got beaten by the computer!";
-   }  else {
-        buttons.forEach((button) => {
+    buttons.forEach((button) => {
 
-            button.addEventListener("click", () => {
-                if (humanScore < 5 && computerScore < 5) {
-                    humanSelection = button.id;
-                    computerSelection = getComputerChoice();
-                    playRound(humanSelection, computerSelection);
-                }
-            } );
+        button.addEventListener("click", () => {
+            if (humanScore < 5 && computerScore < 5) {
+                humanSelection = button.id;
+                computerSelection = getComputerChoice();
+                playRound(humanSelection, computerSelection);
+            }
+            if (humanScore === 5) {
+                        console.log(displayText.textContent = "GAME OVER! You beat the computer!");
+            }
+                
+            if (computerScore === 5) {
+                    console.log(displayText.textContent = "GAME OVER! You got beaten by the computer!");
+                
+            }
         });
-    }
+    });
+
+
 }
-
-    
- 
-  
-
 
 
 playGame();
 
-// let buttons = document.querySelectorAll("button");
-// buttons.forEach((button) => {
-//     button.addEventListener("click", () =>  {
-//         humanSelection = button.id;
-//     });
-     
-// });
-
-// playRound(humanSelection, computerSelection);
-        
-// playGame();
-
-/*Added below code end of last session but no commit*/
-/*changed button variable to buttons*/
-/*if doing forEach does it add an event listener to each so user could input multiple answers*/
-/*Would adding for each inbetween buttons and eventlistener work*/
 
 
 
