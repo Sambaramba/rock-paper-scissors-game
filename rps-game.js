@@ -9,23 +9,6 @@ function getComputerChoice() {
     else {return "scissors"}
 };
 
-// console.log(getComputerChoice());
-/* TODO: change getHumanChoice to attach buttons to event listener somehow*/
-// function getHumanChoice() {
-
-//     let userAnswer = prompt(" What are you going to choose? rock,paper or scissors?").toLowerCase();
-  
-//     while (userAnswer !== "rock" && userAnswer !== "paper" && userAnswer !== "scissors") {
-//         userAnswer = prompt("That is an unacceptable answer numbnuts, please only type either rock, paper or scissors").toLowerCase();
-//     }
-
-//     return userAnswer;
-// }
-
-
-
-    
-
 
 function playGame() {
 
