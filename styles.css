@@ -13,13 +13,6 @@ body {
     background-color: #23ab44;
 }
 
-button {
-    cursor: pointer;
-    border-radius: 10px;
-    background-color: #621b62;
-    color: yellow;
-}
-
 .medium {
     height: 60px;
     width: 180px;
@@ -28,8 +21,9 @@ button {
 }
 
 #displayText,
-#scoreText {
-    background-color: white;
+#scoreText,
+button {
+    cursor: default;
     border-radius: 10px;
     padding: 1% 2%;
     border: 1px solid black;
