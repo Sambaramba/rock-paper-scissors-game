@@ -59,7 +59,6 @@ function playGame() {
     let humanSelection;
     let computerSelection;
     let buttons = document.querySelectorAll("button.medium");
-    console.log(buttons);
 
 /*TODO: after statement is displayed end game and restart*/
 
@@ -72,11 +71,11 @@ function playGame() {
                 playRound(humanSelection, computerSelection);
             }
             if (humanScore === 5) {
-                        console.log(displayText.textContent = "GAME OVER! You beat the computer!");
+                displayText.textContent = "GAME OVER! You beat the computer!";
             }
                 
             if (computerScore === 5) {
-                    console.log(displayText.textContent = "GAME OVER! You got beaten by the computer!");
+                displayText.textContent = "GAME OVER! You got beaten by the computer!";
                 
             }
         });
