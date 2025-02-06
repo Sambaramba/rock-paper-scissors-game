@@ -49,10 +49,6 @@ button {
     gap: 5%;
 }
 
-.preGameDisplay {
-    /* display: none; */
-}
-
 .gameDisplay {
     display: none;
 }
