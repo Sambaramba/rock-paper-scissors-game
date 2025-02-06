@@ -85,7 +85,7 @@ function playGame() {
 
 }
 
-// playGame();
+
 const playGameButton = document.querySelector("#playGame");
 const gameElements = document.querySelectorAll(".gameDisplay");
 
@@ -98,5 +98,12 @@ playGameButton.addEventListener("click",() => {
 
 });
 
+const playAgainButton = document.querySelector("#playAgain");
 
+playAgainButton.addEventListener("click", () => {
+    playGameButton.style.display = "block";
+    gameElements.forEach(element => {
+        element.style.display = "none";
+    })
+})
 
