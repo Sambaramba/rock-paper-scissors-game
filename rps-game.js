@@ -80,6 +80,7 @@ function playGame() {
 
 }
 
+//add event listener to play game button and hide it whilst showing game elements
 
 const playGameButton = document.querySelector("#playGame");
 const gameElements = document.querySelectorAll(".gameDisplay");
@@ -92,6 +93,8 @@ playGameButton.addEventListener("click",() => {
     });
 
 });
+
+//add eventlistener to play again button to hide game elements and show play game button
 
 const playAgainButton = document.querySelector("#playAgain");
 
