@@ -9,6 +9,8 @@ function getComputerChoice() {
     else {return "scissors"}
 };
 
+// const playGameButton = document.querySelector("#playGame");
+// console.log(playGameButton);
 
 function playGame() {
 
@@ -56,8 +58,8 @@ function playGame() {
 
     let humanSelection;
     let computerSelection;
-    let buttons = document.querySelectorAll("button");
-
+    let buttons = document.querySelectorAll("button.medium");
+    console.log(buttons);
 
 /*TODO: after statement is displayed end game and restart*/
 
@@ -83,9 +85,9 @@ function playGame() {
 
 }
 
-
 playGame();
-
+// playGameButton.classList.toggle("preGameDisplay");
+// playGameButton.addEventListener("click", playGame);
 
 
 
