@@ -43,16 +43,16 @@ button {
     color: yellow;
 }
 
+
 #rpsButtonContainer {
     display: flex;
     gap: 5%;
 }
 
 .preGameDisplay {
-    /* display:  */
+    /* display: none; */
 }
 
-.gameDisplay,
-.medium {
+.gameDisplay {
     display: none;
 }
