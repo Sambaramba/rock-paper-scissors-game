@@ -9,7 +9,7 @@ function getComputerChoice() {
     else {return "scissors"}
 };
 
-// const playGameButton = document.querySelector("#playGame");
+
 // console.log(playGameButton);
 
 function playGame() {
@@ -85,9 +85,18 @@ function playGame() {
 
 }
 
-playGame();
-// playGameButton.classList.toggle("preGameDisplay");
-// playGameButton.addEventListener("click", playGame);
+// playGame();
+const playGameButton = document.querySelector("#playGame");
+const gameElements = document.querySelectorAll(".gameDisplay");
+
+playGameButton.addEventListener("click",() => {
+    playGame();
+    playGameButton.style.display = "none";
+    gameElements.forEach(element => {
+        element.style.display = "block";
+    })
+
+});
 
 
 
