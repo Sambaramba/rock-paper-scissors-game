@@ -7,8 +7,7 @@ function getComputerChoice() {
     else if (computerValue === 1) {return "paper"}
 
     else {return "scissors"}
-};
-
+}
 
 function playGame() {
 
@@ -56,10 +55,8 @@ function playGame() {
 
     let humanSelection;
     let computerSelection;
-    let buttons = document.querySelectorAll("button");
+    let buttons = document.querySelectorAll("button.medium");
 
-
-/*TODO: after statement is displayed end game and restart*/
 
     buttons.forEach((button) => {
 
@@ -70,11 +67,11 @@ function playGame() {
                 playRound(humanSelection, computerSelection);
             }
             if (humanScore === 5) {
-                        console.log(displayText.textContent = "GAME OVER! You beat the computer!");
+                displayText.textContent = "GAME OVER! You beat the computer!";
             }
                 
             if (computerScore === 5) {
-                    console.log(displayText.textContent = "GAME OVER! You got beaten by the computer!");
+                displayText.textContent = "GAME OVER! You got beaten by the computer!";
                 
             }
         });
@@ -83,9 +80,28 @@ function playGame() {
 
 }
 
+//add event listener to play game button and hide it whilst showing game elements
 
-playGame();
+const playGameButton = document.querySelector("#playGame");
+const gameElements = document.querySelectorAll(".gameDisplay");
 
+playGameButton.addEventListener("click",() => {
+    playGame();
+    playGameButton.style.display = "none";
+    gameElements.forEach(element => {
+        element.style.display = "block";
+    });
 
+});
 
+//add eventlistener to play again button to hide game elements and show play game button
+
+const playAgainButton = document.querySelector("#playAgain");
+
+playAgainButton.addEventListener("click", () => {
+    playGameButton.style.display = "block";
+    gameElements.forEach(element => {
+        element.style.display = "none";
+    });
+});
 

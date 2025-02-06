@@ -1,7 +1,3 @@
-html {
-    
-}
-
 body {
     display: flex;
     height: 100vh;
@@ -13,33 +9,50 @@ body {
     background-color: #23ab44;
 }
 
-button {
-    cursor: pointer;
-    border-radius: 10px;
-    background-color: #621b62;
-    color: yellow;
-}
-
 .medium {
     height: 60px;
     width: 180px;
     font-size: 30px;
-    
+}
+
+.large {
+    height: 120px;
+    width: 400px;
+    font-size: 55px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #displayText,
-#scoreText {
-    background-color: white;
+#scoreText,
+button {
+    /* display: none; */
+    cursor: default;
     border-radius: 10px;
     padding: 1% 2%;
-    border: 1px solid black;
+    border: 1px solid #621b62;
     white-space: pre-line;
     text-align: center;
     background-color: #621b62;
     color: yellow;
 }
 
+#playAgain {
+    padding: 5px 10px;
+    position: absolute;
+    top: 5%;
+    left: 75%;
+    transform: translate(-50%, -50%); 
+}
+
+
 #rpsButtonContainer {
     display: flex;
     gap: 5%;
+}
+
+.gameDisplay {
+    display: none;
 }
