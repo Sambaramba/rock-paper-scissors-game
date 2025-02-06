@@ -7,10 +7,7 @@ function getComputerChoice() {
     else if (computerValue === 1) {return "paper"}
 
     else {return "scissors"}
-};
-
-
-// console.log(playGameButton);
+}
 
 function playGame() {
 
@@ -60,7 +57,6 @@ function playGame() {
     let computerSelection;
     let buttons = document.querySelectorAll("button.medium");
 
-/*TODO: after statement is displayed end game and restart*/
 
     buttons.forEach((button) => {
 
@@ -93,7 +89,7 @@ playGameButton.addEventListener("click",() => {
     playGameButton.style.display = "none";
     gameElements.forEach(element => {
         element.style.display = "block";
-    })
+    });
 
 });
 
@@ -103,6 +99,6 @@ playAgainButton.addEventListener("click", () => {
     playGameButton.style.display = "block";
     gameElements.forEach(element => {
         element.style.display = "none";
-    })
-})
+    });
+});
 
