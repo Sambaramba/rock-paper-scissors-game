@@ -1,2 +1,2 @@
 # rock-paper-scissors-game
-This is a simple Rock paper scissors game, for the 1st Javascript project in The Odin Project. This game will can be played entirely in the dev tools console. I have included variables, functions, methods, if else statements and a while statement to acheive this goal.
+This is the revisited Rock paper scissors game, the first javascript project in The Odin Project. I have demonstrated my current knowledge of javascript and have used variables, functions, methods, if else statements and event handlers to complete this project.
